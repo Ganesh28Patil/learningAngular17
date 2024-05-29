@@ -1,0 +1,31 @@
+
+
+2.) Angualr 17 onwards 
+
+        App/ routes.ts  ->  AppRoutes
+        App.routes.ts  ->  App.config.ts
+        AppConfig  ->  main.ts
+
+3.) Can I still use RoutingModule in Angualr 17 ?
+    -> Yes
+    -> Angualr 17 is backwards compatible
+
+4.) ng g module <module name>  --routing
+
+
+EP : 14 ::  Standalone Components
+--------------------------------
+
+1.)  ng g c <component_name>  ->  this will create a new folder
+     ng g c <component_name> --flat
+
+2.)  ng g c <component_name> --standalone false
+    
+    You will need a module mandatory
+
+    ng g module <module_name>
+
+    ng g c <component_name> --standalone false --module=<module_name>
+
+
+-----------------------------------------

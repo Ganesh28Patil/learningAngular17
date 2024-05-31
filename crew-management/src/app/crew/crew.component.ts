@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './crew.component.scss'
 })
 export class CrewComponent {
- message = 'message transfering from component'
+  messageSenderFromParent:string = 'data transfered from parent component';          
+  parentSharingToken:number = 13323223;
 }
  

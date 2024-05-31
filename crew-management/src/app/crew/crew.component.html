@@ -1,5 +1,5 @@
-<p class="crew">crew works!</p>
-<div class="crew">
-    parent component
-    <app-crew-desginations></app-crew-desginations>
+<!-- <p class="parentComponent">crew works!</p> -->
+<div class="parentComponent">
+    <h3> parent component (crew works!) </h3>
+    <app-crew-desginations [messageReceiverFromChild]="messageSenderFromParent" [token]="parentSharingToken"></app-crew-desginations>
 </div>

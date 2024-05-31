@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   standalone:true,
@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './crew-desginations.component.scss'
 })
 export class CrewDesginationsComponent {
-
+  @Input()  messageReceiverFromChild:string = '';
+  @Input() token:number = 10;
 }

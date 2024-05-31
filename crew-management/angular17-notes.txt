@@ -1,8 +1,36 @@
+----------------------------------
+EP : 12 ::  Generating Components
+----------------------------------
+1.) ng generate component <component_name>
+        -> in Angualr 17 -> Component are standalone by default
+        -> in previous version -> they are NOT standlone by default
 
+2.) To disable default standalone
+        ng g c <component_name> --standalone false
+
+2.) But if you are on any other Angular version < 17
+        -> Entry in Module file
+            AppModule
+3.) The components are standalone = true by default
+    -> they dont need a module
+    -> otherwise you will get error
+
+4.) Angular.json ->
+    Adding to schematics and disable standalone  = false in angular.json
+
+---------------------------------
+EP : 13 ::  Angualr 17 Vs Angular 16 and below -> with NO AppRoutingModules
+--------------------------------
+1.) Angular 16 and below nedded atleast 1 module 
+    AppModule
+    AppRoutingModules
+
+    The routes were defined in AppRoutingModule and imported into the AppModule
+    Importing AppRoutingModule into AppModule
 
 2.) Angualr 17 onwards 
 
-        App/ routes.ts  ->  AppRoutes
+        App.routes.ts  ->  AppRoutes
         App.routes.ts  ->  App.config.ts
         AppConfig  ->  main.ts
 
@@ -12,9 +40,9 @@
 
 4.) ng g module <module name>  --routing
 
-
+----------------------------------
 EP : 14 ::  Standalone Components
---------------------------------
+----------------------------------
 
 1.)  ng g c <component_name>  ->  this will create a new folder
      ng g c <component_name> --flat
@@ -27,5 +55,30 @@ EP : 14 ::  Standalone Components
 
     ng g c <component_name> --standalone false --module=<module_name>
 
-
+ 
+----------------------------------------
+EP : 15 ::  How to use Components
 -----------------------------------------
+1.)  ng g c <component_name>
+2.)  by default each component will have a prefix -> app1<component_name> 
+3.)  Unique selector name
+4.)  2 step process
+    4.1) Import the component into the required component
+    4.2) <component_name></component_name>
+ 
+ 
+---------------------------------
+ EP : 16 :: Components Communication 
+ (sending data to component /  getting data from component / exchanging of data with in compoenents)
+---------------------------------
+
+@Input -> receiving inputs to the component
+@Output -> sending data from component to parent
+
+Crew [Parent]
+  Crew-Designations [Child]
+
+
+
+EP : ? ::  ?
+--------------------------------

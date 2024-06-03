@@ -1,4 +1,9 @@
 <div class="parentComponent">
-    <h3>parent Component</h3>
-    <app-child [childReceivingDataFromParent]="parentSendingDataToChild"></app-child>
+  <h3>parent Component</h3>
+  <app-child
+    [childReceivingDataFromParent]="parentSendingDataToChild"
+    (childSendingDataToParent)="parentReceivingDataFromChild($event)"
+  ></app-child>
+
+  <h3>{{ parentReceivedDataFromChild }}</h3>
 </div>

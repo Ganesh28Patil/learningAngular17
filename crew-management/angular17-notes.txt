@@ -72,12 +72,30 @@ EP : 15 ::  How to use Components
  (sending data to component /  getting data from component / exchanging of data with in compoenents)
 ---------------------------------
 
-@Input -> receiving inputs to the component
+@Input -> receiving inputs to the component 
 @Output -> sending data from component to parent
 
 Crew [Parent]
   Crew-Designations [Child]
 
+Whenever you want to send data from parent to component 
+then we should make use of @Input() operator
+ <app-child
+    [childReceivingDataFromParent]="parentSendingDataToChild"  
+  ></app-child>
+
+
+Whenever you want to send data from component to Parent 
+then we should make use of @Output() operator
+
+<app-child    
+    (childSendingDataToParent)="parentReceivingDataFromChild($event)"
+  ></app-child>
+
+  @Output() childSendingDataToParent = new EventEmitter<string>();
+  SendData(){
+    this.childSendingDataToParent.emit('Send Data from Child to Parent');
+  }
 
 
 EP : ? ::  ?

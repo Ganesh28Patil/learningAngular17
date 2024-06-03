@@ -1,3 +1,4 @@
+import { UsersModule } from './users/users.module';
 import { ParentComponent } from './parent/parent.component';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
@@ -8,7 +9,7 @@ import { SamplecrewComponent } from './samplecrew/samplecrew.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,SamplecrewComponent,CrewComponent,ParentComponent],
+  imports: [RouterOutlet,SamplecrewComponent,CrewComponent,ParentComponent,UsersModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

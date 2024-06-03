@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './parent.component.scss'
 })
 export class ParentComponent {
-  parentSendingDataToChild:string = 'Data sent from PARENT  to CHILD ';
+  parentSendingDataToChild:string = 'Data sent from PARENT to CHILD ';
 
   parentReceivedDataFromChild:string = '';
   parentReceivingDataFromChild(data:string){

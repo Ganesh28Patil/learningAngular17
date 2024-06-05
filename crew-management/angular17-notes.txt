@@ -167,9 +167,37 @@ EP : 20 ::  Types of Modules
 --------------------------------
 EP : 21 ::  Lazy Loading
 --------------------------------
+  Lazy loading is technique in Angular that allows modules to be loadded on-demand, 
+  imporving application performance by only loading the modules when they are needed.
+
+1.) Lazy laoding module will be loaded only when user goes to that route.
+    Example :- 
+    Crew Management
+        Admin
+            Admin Module
+        Flights page
+            Crew Module
+
+2.) Generate a lazy loading module
+    ng g module <module_name> --routing
+
+3.) Inside lazy loading module we can have
+      --> standalone components
+      --> regualr component    (--sandalone false)
+
+4.) Syntax : 
+    --> To generate a Lazy loading module 
+            ng g m lazy_module --routing
 
 
-
+    --> Route Configuration : 
+            const routes: Routes = [
+              {
+                path:'lazy',
+                loadChildren:() => import('./lazy/lazy.module').then(m => m.LazyModule)
+              }
+            ];
+      
 
 --------------------------------
 EP : 23 ::  Data Binding

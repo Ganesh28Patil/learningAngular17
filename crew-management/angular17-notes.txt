@@ -165,7 +165,7 @@ EP : 20 ::  Types of Modules
               Payments
 
 --------------------------------
-EP : 21 ::  Lazy Loading
+EP : 21 ::  Lazy Loading Module
 --------------------------------
   Lazy loading is technique in Angular that allows modules to be loadded on-demand, 
   imporving application performance by only loading the modules when they are needed.

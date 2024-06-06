@@ -164,9 +164,10 @@ EP : 20 ::  Types of Modules
         -> Cart / Checkout page
               Payments
 
---------------------------------
+
+----------------------------------
 EP : 21 ::  Lazy Loading Module
---------------------------------
+----------------------------------
   Lazy loading is technique in Angular that allows modules to be loadded on-demand, 
   imporving application performance by only loading the modules when they are needed.
 
@@ -197,7 +198,31 @@ EP : 21 ::  Lazy Loading Module
                 loadChildren:() => import('./lazy/lazy.module').then(m => m.LazyModule)
               }
             ];
-      
+
+ 5.)   Make use of <router-outlet></router-outlet> in app.component.html     
+
+
+------------------------------------
+EP : 22 ::  Lazy Loading Component
+------------------------------------
+ 1.)
+    --> Route Configuration : 
+            const routes: Routes = [
+              {
+                path:'lazy',
+                loadComponent:() => import('./lazy/lazy.component').then(c => c.AddNewUserComponent)
+              }
+            ];
+         Example 👇
+            const routes: Routes = [
+              {
+                path:'add-user',
+                loadComponent:() => import('./admin/add-user/add-new-user.component').then(c => c.AddNewUserComponent)
+              }
+            ];
+
+2.)   Make use of <router-outlet></router-outlet> in app.component.html   
+
 
 --------------------------------
 EP : 23 ::  Data Binding
@@ -222,6 +247,13 @@ Angular supports several types of data binding: Interpolation, Property Binding,
     2.3)  Forms
 
 
+
+
+
 --------------------------------
 EP : ? ::  ?
 --------------------------------
+
+
+
+

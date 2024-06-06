@@ -1,4 +1,4 @@
-----------------------------------
+hgh----------------------------------
 EP : 12 ::  Generating Components
 ----------------------------------
 1.) ng generate component <component_name>
@@ -227,25 +227,43 @@ EP : 22 ::  Lazy Loading Component
 --------------------------------
 EP : 23 ::  Data Binding
 --------------------------------
-Data binding in Angular is a fundamental concept that connects the application's data with the user interface, ensuring they stay in sync.
+Data binding in an Angular is a fundamental concept that connects the application's data with the UI, ensuring they stay in sync.
 
 Angular supports several types of data binding: Interpolation, Property Binding, Event Binding,and Two-way Binding.
 
-1.) One way Data Binding 
+1.) One way Data Binding 👇
     1.1.) Interpolation :
       From component(calss) Class to templeate(html)
 
+        ts :  sampleValue:string = 'Interpolation Example';
+        html : <h2> {{sampleValue}} </h2>
+
+ 
     1.2.) Property Binding :
       From component (calss) Class to template's element's property(attribute)  
+        
+        ts: disable:boolean = false;
+        html: <button [disabled]='disable'> Submit </button>
+
+        ts: className : string = 'textStyle'
+        html: <h1 [class]='textStyle'>Example of Property Binding </h1>       
+        css: .textStyle{
+                      color:red;
+              } 
+
+        html: <button (click)='print()'>click to console</button>
+        ts: print(){
+          console.log('Example of eventbinding');
+          console.log('evevnt is binding is usually related to event and it is represented in clossed circle bracket');
+        }
 
     1.3.) Event Binding :  
       From component (calss) Class to template's element's events   
 
-2.) Two way Data Binding 
+2.) Two way Data Binding  👇
     2.1.) Data will flow from component (class) to template and back from template(html/ui) to component(class)
     2.2.) You need data from user
     2.3)  Forms
-
 
 
 

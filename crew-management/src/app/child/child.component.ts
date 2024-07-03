@@ -9,7 +9,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class ChildComponent {
   @Input() childReceivingDataFromParent:string = '';
- 
+
   @Output() childSendingDataToParent = new EventEmitter<string>();
 
   SendData(){
